@@ -1,0 +1,53 @@
+syntax = "proto3";
+package retail;
+
+service RecommendationService {
+  rpc GetRecommendations (RecommendationRequest) returns (stream Product);
+}
+
+service CheckoutService {
+  rpc Checkout (stream CartItem) returns (CheckoutResponse);
+}
+
+service InventoryService {
+  rpc GetStock (StockRequest) returns (StockResponse);
+  rpc MonitorStock (stream StockUpdate) returns (stream StockAlert);
+}
+
+message RecommendationRequest {
+  string user_id = 1;
+}
+
+message Product {
+  string product_id = 1;
+  string name = 2;
+  double price = 3;
+}
+
+message CartItem {
+  string product_id = 1;
+  int32 quantity = 2;
+}
+
+message CheckoutResponse {
+  bool success = 1;
+  string message = 2;
+}
+
+message StockRequest {
+  string product_id = 1;
+}
+
+message StockResponse {
+  int32 quantity = 1;
+}
+
+message StockUpdate {
+  string product_id = 1;
+  int32 change = 2;
+}
+
+message StockAlert {
+  string product_id = 1;
+  string alert_message = 2;
+}
