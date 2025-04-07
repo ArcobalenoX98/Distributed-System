@@ -1,0 +1,25 @@
+//To make the three retail service linked 
+//I decide to create a new service and try to make user operate easily
+
+syntax = "proto3";
+
+package retail;
+
+option java_package = "retail";
+option java_outer_classname = "OrchestratorProto";
+option java_multiple_files = true;
+
+
+service OrchestratorService{
+    rpc ProcessOrder(OrderRequest) returns(OrderResponse);
+}
+
+message OrderRequest{
+    string user_id = 1;
+    int32 quantity = 2;
+}
+
+message OrderResponse{
+    bool success = 1;
+    string message = 2;
+}

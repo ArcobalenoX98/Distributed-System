@@ -26,7 +26,7 @@ public class RecommendationServer {
     static class RecommendationServiceImpl extends RecommendationServiceGrpc.RecommendationServiceImplBase {
         @Override
         public void getRecommendations(RecommendationRequest request, StreamObserver<Product> responseObserver) {
-            System.out.println("📨 Received recommendation request for user: " + request.getUserId());
+            System.out.println(" Received recommendation request for user: " + request.getUserId());
 
             Product product1 = Product.newBuilder()
                     .setProductId("P001")

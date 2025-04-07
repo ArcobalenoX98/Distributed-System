@@ -23,7 +23,7 @@ public class RecommendationClient {
                 .setUserId("user123")
                 .build();
 
-        System.out.println("📤 Sending recommendation request...");
+        System.out.println(" Sending recommendation request...");
 
         stub.getRecommendations(request).forEachRemaining(product -> {
             System.out.println(" Product: " + product.getName() + " - $" + product.getPrice());
