@@ -5,16 +5,20 @@ import retail.OrderRequest;
 import retail.OrderResponse;
 import retail.CheckoutServiceGrpc;
 import retail.Retail;
+import retail.Retail.StockRequest;
+import retail.Retail.StockResponse;
 import retail.RecommendationServiceGrpc;
+import retail.Retail.RecommendationRequest;
+import retail.Retail.Product;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.stub.StreamObserver;
-import retail.Retail;
 import retail.InventoryServiceGrpc;
 
 import java.io.IOException;
+import java.util.Iterator;
 import java.util.logging.Logger;
 
 public class OrchestratorServer {
@@ -32,19 +36,23 @@ public class OrchestratorServer {
     static class OrchestratorServiceImpl extends OrchestratorServiceGrpc.OrchestratorServiceImplBase {
         @Override
         public void processOrder(OrderRequest request, StreamObserver<OrderResponse> responseObserver) {
-            String userId = request.getUserId();
-            logger.info("Processing order for user: " + userId);
 
             // 1. Inventory Check (Call Inventory service)
-            ManagedChannel inventoryChannel = ManagedChannelBuilder.forAddress("localhost", 50050).usePlaintext().build();
+            ManagedChannel inventoryChannel = ManagedChannelBuilder.forAddress("localhost", 50052).usePlaintext().build();
             InventoryServiceGrpc.InventoryServiceBlockingStub inventoryStub = InventoryServiceGrpc.newBlockingStub(inventoryChannel);
-            Retail.StockResponse inventoryResponse = inventoryStub.getStock(
-                    Retail.StockRequest.newBuilder().setProductId("123").build()
+            StockResponse inventoryResponse = inventoryStub.getStock(
+                    StockRequest.newBuilder().setProductId("123").build()
             );
             inventoryChannel.shutdown();
 
+            String userId = request.getUserId();
+            logger.info("Processing order for user: " + userId);
+            logger.info("receive request: userId=" + request.getUserId() + ",quantity=" +request.getQuantity());
+            logger.info("inventory back: quantity=" + inventoryResponse.getQuantity());
+
+
             // 2. Checkout (Call Checkout service)
-            ManagedChannel checkoutChannel = ManagedChannelBuilder.forAddress("localhost", 50052).usePlaintext().build();
+            ManagedChannel checkoutChannel = ManagedChannelBuilder.forAddress("localhost", 50050).usePlaintext().build();
             CheckoutServiceGrpc.CheckoutServiceStub checkoutStub = CheckoutServiceGrpc.newStub(checkoutChannel);
 
             Retail.CartItem item = Retail.CartItem.newBuilder().setProductId("123").setQuantity(1).build();
@@ -73,6 +81,29 @@ public class OrchestratorServer {
                     checkoutChannel.shutdown();
                 }
             };
+
+
+            // 3 Recommendation (call Recommendation service)
+            ManagedChannel recommendationChannel = ManagedChannelBuilder.forAddress("localhost",50051)
+                    .usePlaintext()
+                    .build();
+            RecommendationServiceGrpc.RecommendationServiceBlockingStub recommendationStub =
+                    RecommendationServiceGrpc.newBlockingStub(recommendationChannel);
+
+                //constructor requist
+            RecommendationRequest recRequest = RecommendationRequest.newBuilder()
+                    .setUserId(request.getUserId())
+                    .build();
+
+                //useing the grpc server-streaming,access the recommendation
+            Iterator<Product> products = recommendationStub.getRecommendations(recRequest);
+
+            System.out.println("Recommended Products:");
+            while(products.hasNext()){
+                retail.Retail.Product p = products.next();
+                System.out.println("-" + p.getName() + ":" + p.getPrice() + "Euro");
+            }
+
 
             StreamObserver<Retail.CartItem> requestObserver = checkoutStub.checkout(checkoutResponseObserver);
             requestObserver.onNext(item);

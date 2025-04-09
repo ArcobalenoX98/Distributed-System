@@ -15,12 +15,12 @@ public class CheckoutServer {
     private static final Logger logger = Logger.getLogger(CheckoutServer.class.getName());
 
     public static void main(String[] args) throws IOException, InterruptedException {
-        Server server = ServerBuilder.forPort(50052)
+        Server server = ServerBuilder.forPort(50050)
                 .addService(new CheckoutServiceImpl())
                 .build();
 
         server.start();
-        logger.info("Checkout gRPC server started on port 50052");
+        logger.info("Checkout gRPC server started on port 50050");
         server.awaitTermination();
     }
 

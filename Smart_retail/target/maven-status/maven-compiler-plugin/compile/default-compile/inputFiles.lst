@@ -3,6 +3,7 @@
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/checkout/CheckoutServer.java
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/inventory/InventoryClient.java
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/inventory/InventoryServer.java
+/Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/orchestrator/OrchestratorClient.java
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/orchestrator/OrchestratorServer.java
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/recommendation/RecommendationClient.java
 /Users/kriszhou/Public/git/Distributed-System/Smart_retail/src/main/java/com/retail/recommendation/RecommendationServer.java
