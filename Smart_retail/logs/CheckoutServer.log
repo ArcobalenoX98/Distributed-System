@@ -208,3 +208,59 @@ java.io.IOException: Broken pipe
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
+16:46:42.271 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+16:46:42.274 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+16:46:42.276 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+16:46:42.276 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND SETTINGS: ack=true
+16:46:42.277 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+16:46:42.277 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND SETTINGS: ack=true
+16:46:42.278 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+16:46:42.280 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+16:46:42.280 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND PING: ack=false bytes=1234
+16:46:42.281 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND PING: ack=true bytes=1234
+4月 15, 2025 4:46:42 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+INFO: Received cart item: 123, quantity: 1
+16:46:42.284 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 15, 2025 4:46:42 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+INFO: Checkout completed: Processed checkout with total items: 1
+16:46:42.284 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+16:46:42.285 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND PING: ack=false bytes=1234
+16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND PING: ack=true bytes=1234
+16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+16:46:42.287 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
+16:46:42.287 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 ! R:/127.0.0.1:49182] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:66)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:227)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:158)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:597)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:631)
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:430)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:931)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:354)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.flush(AbstractChannel.java:895)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.flush(DefaultChannelPipeline.java:1372)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeFlush0(AbstractChannelHandlerContext.java:921)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeFlush(AbstractChannelHandlerContext.java:907)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:893)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler.onError(Http2ConnectionHandler.java:656)
+	at io.grpc.netty.shaded.io.grpc.netty.AbstractNettyHandler.exceptionCaught(AbstractNettyHandler.java:99)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1377)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:907)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.handleReadException(AbstractNioByteChannel.java:125)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:177)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
