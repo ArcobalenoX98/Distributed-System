@@ -1,6 +1,8 @@
 syntax = "proto3";
 package retail;
 
+import "google/protobuf/empty.proto";
+
 service RecommendationService {
   rpc GetRecommendations (RecommendationRequest) returns (stream Product);
 }
@@ -12,6 +14,14 @@ service CheckoutService {
 service InventoryService {
   rpc GetStock (StockRequest) returns (StockResponse);
   rpc MonitorStock (stream StockUpdate) returns (stream StockAlert);
+
+  //require to access all the product 20250415
+  rpc GetInventory(google.protobuf.Empty) returns(ProductList);
+}
+
+//20250415
+message ProductList{
+  repeated Product products = 1;
 }
 
 message RecommendationRequest {

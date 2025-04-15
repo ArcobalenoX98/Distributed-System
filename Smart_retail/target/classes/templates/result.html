@@ -9,5 +9,14 @@
     <p th:text="'Order Success: ' + ${result}"></p>
     <p th:text="'Message: ' + ${message}"></p>
     <a href="/">Back</a>
+
+    <!-- Recommendation area-->
+    <h2>Recommended Products</h2>
+    <ul>
+        <li th:each="product : ${recommendations}">
+            <span th:text="${product.name}"></span> - 
+            <span th:text="${product.price}"></span> Euro
+        </li>
+    </ul>
 </body>
 </html>

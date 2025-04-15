@@ -77,6 +77,37 @@ public final class InventoryServiceGrpc {
     return getMonitorStockMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      retail.Retail.ProductList> getGetInventoryMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetInventory",
+      requestType = com.google.protobuf.Empty.class,
+      responseType = retail.Retail.ProductList.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
+      retail.Retail.ProductList> getGetInventoryMethod() {
+    io.grpc.MethodDescriptor<com.google.protobuf.Empty, retail.Retail.ProductList> getGetInventoryMethod;
+    if ((getGetInventoryMethod = InventoryServiceGrpc.getGetInventoryMethod) == null) {
+      synchronized (InventoryServiceGrpc.class) {
+        if ((getGetInventoryMethod = InventoryServiceGrpc.getGetInventoryMethod) == null) {
+          InventoryServiceGrpc.getGetInventoryMethod = getGetInventoryMethod =
+              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, retail.Retail.ProductList>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetInventory"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  retail.Retail.ProductList.getDefaultInstance()))
+              .setSchemaDescriptor(new InventoryServiceMethodDescriptorSupplier("GetInventory"))
+              .build();
+        }
+      }
+    }
+    return getGetInventoryMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,16 @@ public final class InventoryServiceGrpc {
         io.grpc.stub.StreamObserver<retail.Retail.StockAlert> responseObserver) {
       return io.grpc.stub.ServerCalls.asyncUnimplementedStreamingCall(getMonitorStockMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     *require to access all the product 20250415
+     * </pre>
+     */
+    default void getInventory(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<retail.Retail.ProductList> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInventoryMethod(), responseObserver);
+    }
   }
 
   /**
@@ -182,6 +223,17 @@ public final class InventoryServiceGrpc {
       return io.grpc.stub.ClientCalls.asyncBidiStreamingCall(
           getChannel().newCall(getMonitorStockMethod(), getCallOptions()), responseObserver);
     }
+
+    /**
+     * <pre>
+     *require to access all the product 20250415
+     * </pre>
+     */
+    public void getInventory(com.google.protobuf.Empty request,
+        io.grpc.stub.StreamObserver<retail.Retail.ProductList> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetInventoryMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -205,6 +257,16 @@ public final class InventoryServiceGrpc {
     public retail.Retail.StockResponse getStock(retail.Retail.StockRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetStockMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *require to access all the product 20250415
+     * </pre>
+     */
+    public retail.Retail.ProductList getInventory(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetInventoryMethod(), getCallOptions(), request);
     }
   }
 
@@ -231,10 +293,22 @@ public final class InventoryServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetStockMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     *require to access all the product 20250415
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<retail.Retail.ProductList> getInventory(
+        com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetInventoryMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_STOCK = 0;
-  private static final int METHODID_MONITOR_STOCK = 1;
+  private static final int METHODID_GET_INVENTORY = 1;
+  private static final int METHODID_MONITOR_STOCK = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -256,6 +330,10 @@ public final class InventoryServiceGrpc {
         case METHODID_GET_STOCK:
           serviceImpl.getStock((retail.Retail.StockRequest) request,
               (io.grpc.stub.StreamObserver<retail.Retail.StockResponse>) responseObserver);
+          break;
+        case METHODID_GET_INVENTORY:
+          serviceImpl.getInventory((com.google.protobuf.Empty) request,
+              (io.grpc.stub.StreamObserver<retail.Retail.ProductList>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -292,6 +370,13 @@ public final class InventoryServiceGrpc {
               retail.Retail.StockUpdate,
               retail.Retail.StockAlert>(
                 service, METHODID_MONITOR_STOCK)))
+        .addMethod(
+          getGetInventoryMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              retail.Retail.ProductList>(
+                service, METHODID_GET_INVENTORY)))
         .build();
   }
 
@@ -342,6 +427,7 @@ public final class InventoryServiceGrpc {
               .setSchemaDescriptor(new InventoryServiceFileDescriptorSupplier())
               .addMethod(getGetStockMethod())
               .addMethod(getMonitorStockMethod())
+              .addMethod(getGetInventoryMethod())
               .build();
         }
       }

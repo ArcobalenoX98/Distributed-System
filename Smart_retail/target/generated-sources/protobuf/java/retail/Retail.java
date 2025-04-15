@@ -15,6 +15,796 @@ public final class Retail {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
+  public interface ProductListOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:retail.ProductList)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    java.util.List<retail.Retail.Product> 
+        getProductsList();
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    retail.Retail.Product getProducts(int index);
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    int getProductsCount();
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    java.util.List<? extends retail.Retail.ProductOrBuilder> 
+        getProductsOrBuilderList();
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    retail.Retail.ProductOrBuilder getProductsOrBuilder(
+        int index);
+  }
+  /**
+   * <pre>
+   *20250415
+   * </pre>
+   *
+   * Protobuf type {@code retail.ProductList}
+   */
+  public static final class ProductList extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:retail.ProductList)
+      ProductListOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ProductList.newBuilder() to construct.
+    private ProductList(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ProductList() {
+      products_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ProductList();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return retail.Retail.internal_static_retail_ProductList_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return retail.Retail.internal_static_retail_ProductList_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              retail.Retail.ProductList.class, retail.Retail.ProductList.Builder.class);
+    }
+
+    public static final int PRODUCTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private java.util.List<retail.Retail.Product> products_;
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<retail.Retail.Product> getProductsList() {
+      return products_;
+    }
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends retail.Retail.ProductOrBuilder> 
+        getProductsOrBuilderList() {
+      return products_;
+    }
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    @java.lang.Override
+    public int getProductsCount() {
+      return products_.size();
+    }
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    @java.lang.Override
+    public retail.Retail.Product getProducts(int index) {
+      return products_.get(index);
+    }
+    /**
+     * <code>repeated .retail.Product products = 1;</code>
+     */
+    @java.lang.Override
+    public retail.Retail.ProductOrBuilder getProductsOrBuilder(
+        int index) {
+      return products_.get(index);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      for (int i = 0; i < products_.size(); i++) {
+        output.writeMessage(1, products_.get(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      for (int i = 0; i < products_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, products_.get(i));
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof retail.Retail.ProductList)) {
+        return super.equals(obj);
+      }
+      retail.Retail.ProductList other = (retail.Retail.ProductList) obj;
+
+      if (!getProductsList()
+          .equals(other.getProductsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getProductsCount() > 0) {
+        hash = (37 * hash) + PRODUCTS_FIELD_NUMBER;
+        hash = (53 * hash) + getProductsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static retail.Retail.ProductList parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static retail.Retail.ProductList parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static retail.Retail.ProductList parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static retail.Retail.ProductList parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static retail.Retail.ProductList parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static retail.Retail.ProductList parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(retail.Retail.ProductList prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     *20250415
+     * </pre>
+     *
+     * Protobuf type {@code retail.ProductList}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:retail.ProductList)
+        retail.Retail.ProductListOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return retail.Retail.internal_static_retail_ProductList_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return retail.Retail.internal_static_retail_ProductList_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                retail.Retail.ProductList.class, retail.Retail.ProductList.Builder.class);
+      }
+
+      // Construct using retail.Retail.ProductList.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        if (productsBuilder_ == null) {
+          products_ = java.util.Collections.emptyList();
+        } else {
+          products_ = null;
+          productsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000001);
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return retail.Retail.internal_static_retail_ProductList_descriptor;
+      }
+
+      @java.lang.Override
+      public retail.Retail.ProductList getDefaultInstanceForType() {
+        return retail.Retail.ProductList.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public retail.Retail.ProductList build() {
+        retail.Retail.ProductList result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public retail.Retail.ProductList buildPartial() {
+        retail.Retail.ProductList result = new retail.Retail.ProductList(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(retail.Retail.ProductList result) {
+        if (productsBuilder_ == null) {
+          if (((bitField0_ & 0x00000001) != 0)) {
+            products_ = java.util.Collections.unmodifiableList(products_);
+            bitField0_ = (bitField0_ & ~0x00000001);
+          }
+          result.products_ = products_;
+        } else {
+          result.products_ = productsBuilder_.build();
+        }
+      }
+
+      private void buildPartial0(retail.Retail.ProductList result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof retail.Retail.ProductList) {
+          return mergeFrom((retail.Retail.ProductList)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(retail.Retail.ProductList other) {
+        if (other == retail.Retail.ProductList.getDefaultInstance()) return this;
+        if (productsBuilder_ == null) {
+          if (!other.products_.isEmpty()) {
+            if (products_.isEmpty()) {
+              products_ = other.products_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+            } else {
+              ensureProductsIsMutable();
+              products_.addAll(other.products_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.products_.isEmpty()) {
+            if (productsBuilder_.isEmpty()) {
+              productsBuilder_.dispose();
+              productsBuilder_ = null;
+              products_ = other.products_;
+              bitField0_ = (bitField0_ & ~0x00000001);
+              productsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getProductsFieldBuilder() : null;
+            } else {
+              productsBuilder_.addAllMessages(other.products_);
+            }
+          }
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                retail.Retail.Product m =
+                    input.readMessage(
+                        retail.Retail.Product.parser(),
+                        extensionRegistry);
+                if (productsBuilder_ == null) {
+                  ensureProductsIsMutable();
+                  products_.add(m);
+                } else {
+                  productsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.util.List<retail.Retail.Product> products_ =
+        java.util.Collections.emptyList();
+      private void ensureProductsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          products_ = new java.util.ArrayList<retail.Retail.Product>(products_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          retail.Retail.Product, retail.Retail.Product.Builder, retail.Retail.ProductOrBuilder> productsBuilder_;
+
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public java.util.List<retail.Retail.Product> getProductsList() {
+        if (productsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(products_);
+        } else {
+          return productsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public int getProductsCount() {
+        if (productsBuilder_ == null) {
+          return products_.size();
+        } else {
+          return productsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public retail.Retail.Product getProducts(int index) {
+        if (productsBuilder_ == null) {
+          return products_.get(index);
+        } else {
+          return productsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder setProducts(
+          int index, retail.Retail.Product value) {
+        if (productsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProductsIsMutable();
+          products_.set(index, value);
+          onChanged();
+        } else {
+          productsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder setProducts(
+          int index, retail.Retail.Product.Builder builderForValue) {
+        if (productsBuilder_ == null) {
+          ensureProductsIsMutable();
+          products_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          productsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder addProducts(retail.Retail.Product value) {
+        if (productsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProductsIsMutable();
+          products_.add(value);
+          onChanged();
+        } else {
+          productsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder addProducts(
+          int index, retail.Retail.Product value) {
+        if (productsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureProductsIsMutable();
+          products_.add(index, value);
+          onChanged();
+        } else {
+          productsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder addProducts(
+          retail.Retail.Product.Builder builderForValue) {
+        if (productsBuilder_ == null) {
+          ensureProductsIsMutable();
+          products_.add(builderForValue.build());
+          onChanged();
+        } else {
+          productsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder addProducts(
+          int index, retail.Retail.Product.Builder builderForValue) {
+        if (productsBuilder_ == null) {
+          ensureProductsIsMutable();
+          products_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          productsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder addAllProducts(
+          java.lang.Iterable<? extends retail.Retail.Product> values) {
+        if (productsBuilder_ == null) {
+          ensureProductsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, products_);
+          onChanged();
+        } else {
+          productsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder clearProducts() {
+        if (productsBuilder_ == null) {
+          products_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000001);
+          onChanged();
+        } else {
+          productsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public Builder removeProducts(int index) {
+        if (productsBuilder_ == null) {
+          ensureProductsIsMutable();
+          products_.remove(index);
+          onChanged();
+        } else {
+          productsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public retail.Retail.Product.Builder getProductsBuilder(
+          int index) {
+        return getProductsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public retail.Retail.ProductOrBuilder getProductsOrBuilder(
+          int index) {
+        if (productsBuilder_ == null) {
+          return products_.get(index);  } else {
+          return productsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public java.util.List<? extends retail.Retail.ProductOrBuilder> 
+           getProductsOrBuilderList() {
+        if (productsBuilder_ != null) {
+          return productsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(products_);
+        }
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public retail.Retail.Product.Builder addProductsBuilder() {
+        return getProductsFieldBuilder().addBuilder(
+            retail.Retail.Product.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public retail.Retail.Product.Builder addProductsBuilder(
+          int index) {
+        return getProductsFieldBuilder().addBuilder(
+            index, retail.Retail.Product.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .retail.Product products = 1;</code>
+       */
+      public java.util.List<retail.Retail.Product.Builder> 
+           getProductsBuilderList() {
+        return getProductsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          retail.Retail.Product, retail.Retail.Product.Builder, retail.Retail.ProductOrBuilder> 
+          getProductsFieldBuilder() {
+        if (productsBuilder_ == null) {
+          productsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              retail.Retail.Product, retail.Retail.Product.Builder, retail.Retail.ProductOrBuilder>(
+                  products_,
+                  ((bitField0_ & 0x00000001) != 0),
+                  getParentForChildren(),
+                  isClean());
+          products_ = null;
+        }
+        return productsBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:retail.ProductList)
+    }
+
+    // @@protoc_insertion_point(class_scope:retail.ProductList)
+    private static final retail.Retail.ProductList DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new retail.Retail.ProductList();
+    }
+
+    public static retail.Retail.ProductList getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ProductList>
+        PARSER = new com.google.protobuf.AbstractParser<ProductList>() {
+      @java.lang.Override
+      public ProductList parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ProductList> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ProductList> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public retail.Retail.ProductList getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface RecommendationRequestOrBuilder extends
       // @@protoc_insertion_point(interface_extends:retail.RecommendationRequest)
       com.google.protobuf.MessageOrBuilder {
@@ -4943,6 +5733,11 @@ public final class Retail {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_retail_ProductList_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_retail_ProductList_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_retail_RecommendationRequest_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -4991,78 +5786,89 @@ public final class Retail {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014retail.proto\022\006retail\"(\n\025Recommendation" +
-      "Request\022\017\n\007user_id\030\001 \001(\t\":\n\007Product\022\022\n\np" +
-      "roduct_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003" +
-      " \001(\001\"0\n\010CartItem\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010" +
-      "quantity\030\002 \001(\005\"4\n\020CheckoutResponse\022\017\n\007su" +
-      "ccess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\"\n\014StockReq" +
-      "uest\022\022\n\nproduct_id\030\001 \001(\t\"!\n\rStockRespons" +
-      "e\022\020\n\010quantity\030\001 \001(\005\"1\n\013StockUpdate\022\022\n\npr" +
-      "oduct_id\030\001 \001(\t\022\016\n\006change\030\002 \001(\005\"7\n\nStockA" +
-      "lert\022\022\n\nproduct_id\030\001 \001(\t\022\025\n\ralert_messag" +
-      "e\030\002 \001(\t2_\n\025RecommendationService\022F\n\022GetR" +
-      "ecommendations\022\035.retail.RecommendationRe" +
-      "quest\032\017.retail.Product0\0012K\n\017CheckoutServ" +
-      "ice\0228\n\010Checkout\022\020.retail.CartItem\032\030.reta" +
-      "il.CheckoutResponse(\0012\210\001\n\020InventoryServi" +
-      "ce\0227\n\010GetStock\022\024.retail.StockRequest\032\025.r" +
-      "etail.StockResponse\022;\n\014MonitorStock\022\023.re" +
-      "tail.StockUpdate\032\022.retail.StockAlert(\0010\001" +
-      "b\006proto3"
+      "\n\014retail.proto\022\006retail\032\033google/protobuf/" +
+      "empty.proto\"0\n\013ProductList\022!\n\010products\030\001" +
+      " \003(\0132\017.retail.Product\"(\n\025RecommendationR" +
+      "equest\022\017\n\007user_id\030\001 \001(\t\":\n\007Product\022\022\n\npr" +
+      "oduct_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 " +
+      "\001(\001\"0\n\010CartItem\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010q" +
+      "uantity\030\002 \001(\005\"4\n\020CheckoutResponse\022\017\n\007suc" +
+      "cess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\"\n\014StockRequ" +
+      "est\022\022\n\nproduct_id\030\001 \001(\t\"!\n\rStockResponse" +
+      "\022\020\n\010quantity\030\001 \001(\005\"1\n\013StockUpdate\022\022\n\npro" +
+      "duct_id\030\001 \001(\t\022\016\n\006change\030\002 \001(\005\"7\n\nStockAl" +
+      "ert\022\022\n\nproduct_id\030\001 \001(\t\022\025\n\ralert_message" +
+      "\030\002 \001(\t2_\n\025RecommendationService\022F\n\022GetRe" +
+      "commendations\022\035.retail.RecommendationReq" +
+      "uest\032\017.retail.Product0\0012K\n\017CheckoutServi" +
+      "ce\0228\n\010Checkout\022\020.retail.CartItem\032\030.retai" +
+      "l.CheckoutResponse(\0012\305\001\n\020InventoryServic" +
+      "e\0227\n\010GetStock\022\024.retail.StockRequest\032\025.re" +
+      "tail.StockResponse\022;\n\014MonitorStock\022\023.ret" +
+      "ail.StockUpdate\032\022.retail.StockAlert(\0010\001\022" +
+      ";\n\014GetInventory\022\026.google.protobuf.Empty\032" +
+      "\023.retail.ProductListb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.protobuf.EmptyProto.getDescriptor(),
         });
-    internal_static_retail_RecommendationRequest_descriptor =
+    internal_static_retail_ProductList_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_retail_ProductList_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_retail_ProductList_descriptor,
+        new java.lang.String[] { "Products", });
+    internal_static_retail_RecommendationRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
     internal_static_retail_RecommendationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_RecommendationRequest_descriptor,
         new java.lang.String[] { "UserId", });
     internal_static_retail_Product_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_retail_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_Product_descriptor,
         new java.lang.String[] { "ProductId", "Name", "Price", });
     internal_static_retail_CartItem_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_retail_CartItem_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_CartItem_descriptor,
         new java.lang.String[] { "ProductId", "Quantity", });
     internal_static_retail_CheckoutResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_retail_CheckoutResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_CheckoutResponse_descriptor,
         new java.lang.String[] { "Success", "Message", });
     internal_static_retail_StockRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_retail_StockRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_StockRequest_descriptor,
         new java.lang.String[] { "ProductId", });
     internal_static_retail_StockResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_retail_StockResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_StockResponse_descriptor,
         new java.lang.String[] { "Quantity", });
     internal_static_retail_StockUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_retail_StockUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_StockUpdate_descriptor,
         new java.lang.String[] { "ProductId", "Change", });
     internal_static_retail_StockAlert_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_retail_StockAlert_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_StockAlert_descriptor,
         new java.lang.String[] { "ProductId", "AlertMessage", });
+    com.google.protobuf.EmptyProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

@@ -10,6 +10,11 @@ import retail.InventoryServiceGrpc.InventoryServiceImplBase;
 import retail.Retail.StockResponse;
 import retail.Retail.StockResponse;
 
+import com.google.protobuf.Empty;
+import retail.Retail.ProductList;
+import retail.Retail.Product;
+
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -42,6 +47,16 @@ public class InventoryServer{
                     .setQuantity(quantity)
                     .build();
             responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        }
+
+        public void getInventory(Empty request,StreamObserver<ProductList> responseObserver){
+            ProductList.Builder response = ProductList.newBuilder();
+            //
+            response.addProducts(Product.newBuilder().setProductId("p001").setName("laptop").setPrice(999.99));
+            response.addProducts(Product.newBuilder().setProductId("p002").setName("Smartphone").setPrice(699.99));
+
+            responseObserver.onNext(response.build());
             responseObserver.onCompleted();
         }
     }
