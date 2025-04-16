@@ -56,8 +56,8 @@ public class RetailController {
             ProductList productList = stub3.getInventory(emptyRequest);
             inventory.addAll(productList.getProductsList());
 
-            Retail.StockRequest stockRequest = Retail.StockRequest.newBuilder().setProductId("example-product-id").build();
-            Retail.StockResponse stockResponse = stub3.getStock(stockRequest);
+            //Retail.StockRequest stockRequest = Retail.StockRequest.newBuilder().setProductId("example-product-id").build();
+            //Retail.StockResponse stockResponse = stub3.getStock(stockRequest);
 
             //add a produt for test
             Retail.Product sampleProduct = Retail.Product.newBuilder()
@@ -72,20 +72,35 @@ public class RetailController {
                 System.out.println("Loaded product:" + product.getProductId() + "-" + product.getName());
             }
 
-            System.out.println("Number of inventory is:" + stockResponse.getQuantity());
+            //System.out.println("Number of inventory is:" + stockResponse.getQuantity());
             inventoryChannel.shutdown();
 
         } catch (Exception e) {
             System.out.println("Inventory fetch error:" + e.getMessage());
         }
-        model.addAttribute("inventoryList",inventory);
+        model.addAttribute("inventory",inventory);
+        System.out.println("Inventory size: " + inventory.size());
         return "index";
     }
 
     @PostMapping("/placeOrder")
-    public String placeOrder(@RequestParam String userId,@RequestParam int quantity,Model model){
+    public String placeOrder(@RequestParam String userId,@RequestParam String productId,@RequestParam int quantity,Model model){
+        //Query inventory quantity
+        int inventoryQuantity = 0;
+        try {
+            ManagedChannel inventoryChannel = ManagedChannelBuilder.forAddress("localhost", 50052).usePlaintext().build();
+            InventoryServiceGrpc.InventoryServiceBlockingStub stub3 = InventoryServiceGrpc.newBlockingStub(inventoryChannel);
 
-        //Retail.CartItem item = Retail.CartItem.newBuilder().setProductId(productID).setQuantity(quantity).build();
+            Retail.StockRequest stockRequest = Retail.StockRequest.newBuilder().setProductId(productId).build();
+            Retail.StockResponse stockResponse = stub3.getStock(stockRequest);
+            inventoryQuantity = stockResponse.getQuantity();
+            model.addAttribute("available",inventoryQuantity);
+
+            System.out.println("Inventory quantity for product " + productId + ": " + inventoryQuantity);
+            inventoryChannel.shutdown();
+        } catch (Exception e) {
+            System.out.println("Inventory fetch error:" + e.getMessage());
+        }
 
         // connect to the Orchestrator service
         ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost",50053).usePlaintext().build();
@@ -99,6 +114,8 @@ public class RetailController {
         model.addAttribute("title","Smart Retail Result");
         model.addAttribute("result",response.getSuccess());
         model.addAttribute("message",response.getMessage());
+        model.addAttribute("inventoryQuantity", inventoryQuantity);
+        model.addAttribute("selectedProductId",productId);
 
         //recommendation Service
         List<Product> recommendations = new ArrayList<>();

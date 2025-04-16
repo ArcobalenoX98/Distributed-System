@@ -49,7 +49,6 @@ retail/OrchestratorServiceGrpc$AsyncService.class
 retail/RecommendationServiceGrpc$RecommendationServiceBaseDescriptorSupplier.class
 retail/RecommendationServiceGrpc.class
 retail/OrchestratorServiceGrpc$OrchestratorServiceFileDescriptorSupplier.class
-com/retail/gui/SmartRetailGuiApplication.class
 retail/InventoryServiceGrpc$InventoryServiceBlockingStub.class
 retail/InventoryServiceGrpc$InventoryServiceFutureStub.class
 retail/CheckoutServiceGrpc$1.class

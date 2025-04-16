@@ -96,8 +96,7 @@
             </goals>
             <configuration>
               <sources>
-                <source>target/generated-sources/protobuf/java</source>
-                <source>target/generated-sources/protobuf/grpc-java</source>
+                <source>src/main/generated</source>
               </sources>
             </configuration>
           </execution>

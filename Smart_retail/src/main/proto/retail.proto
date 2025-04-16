@@ -32,6 +32,7 @@ message Product {
   string product_id = 1;
   string name = 2;
   double price = 3;
+  int32 quantity = 4;
 }
 
 message CartItem {

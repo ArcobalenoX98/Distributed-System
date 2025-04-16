@@ -26,13 +26,34 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v2.7.18)
 
-2025-04-15 16:26:17.805  INFO 16349 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : Starting SmartRetailGuiApplication using Java 23.0.2 on KRISMACBOOK-AIR.station with PID 16349 (/Users/kriszhou/Public/git/Distributed-System/Smart_retail/target/classes started by kriszhou in /Users/kriszhou/Public/git/Distributed-System/Smart_retail)
-2025-04-15 16:26:17.806  INFO 16349 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-04-15 16:26:18.226  INFO 16349 --- [lication.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2025-04-15 16:26:18.231  INFO 16349 --- [lication.main()] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-04-15 16:26:18.231  INFO 16349 --- [lication.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
-2025-04-15 16:26:18.271  INFO 16349 --- [lication.main()] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-04-15 16:26:18.271  INFO 16349 --- [lication.main()] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 444 ms
-2025-04-15 16:26:18.366  INFO 16349 --- [lication.main()] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2025-04-15 16:26:18.447  INFO 16349 --- [lication.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2025-04-15 16:26:18.452  INFO 16349 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : Started SmartRetailGuiApplication in 5.91 seconds (JVM running for 9.207)
+2025-04-16 15:42:04.788  INFO 43987 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : Starting SmartRetailGuiApplication using Java 23.0.2 on KRISMACBOOK-AIR.station with PID 43987 (/Users/kriszhou/Public/git/Distributed-System/Smart_retail/target/classes started by kriszhou in /Users/kriszhou/Public/git/Distributed-System/Smart_retail)
+2025-04-16 15:42:04.789  INFO 43987 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-04-16 15:42:05.294  INFO 43987 --- [lication.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2025-04-16 15:42:05.303  INFO 43987 --- [lication.main()] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-04-16 15:42:05.303  INFO 43987 --- [lication.main()] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.83]
+2025-04-16 15:42:05.345  INFO 43987 --- [lication.main()] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-04-16 15:42:05.345  INFO 43987 --- [lication.main()] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 532 ms
+2025-04-16 15:42:05.442  INFO 43987 --- [lication.main()] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2025-04-16 15:42:05.618  INFO 43987 --- [lication.main()] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2025-04-16 15:42:05.624  INFO 43987 --- [lication.main()] c.retail.gui.SmartRetailGuiApplication   : Started SmartRetailGuiApplication in 3.176 seconds (JVM running for 6.262)
+2025-04-16 15:42:07.135  INFO 43987 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-16 15:42:07.135  INFO 43987 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-04-16 15:42:07.136  INFO 43987 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Loaded product:p001-laptop
+Loaded product:p002-Smartphone
+Loaded product:example-product-id-Sample Product
+Number of inventory is:0
+Inventory size: 3
+Inventory quantity for product p002: 5
+Loaded product:p001-laptop
+Loaded product:p002-Smartphone
+Loaded product:example-product-id-Sample Product
+Number of inventory is:0
+Inventory size: 3
+Inventory quantity for product example-product-id: 0
+Inventory quantity for product p002: 5
+Loaded product:p001-laptop
+Loaded product:p002-Smartphone
+Loaded product:example-product-id-Sample Product
+Number of inventory is:0
+Inventory size: 3

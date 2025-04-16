@@ -17,107 +17,127 @@
 [WARNING] 1 problem was encountered while building the effective model for org.javassist:javassist:jar:3.20.0-GA during dependency collection step for project (use -X to see details)
 [INFO] 
 [INFO] --- exec:3.5.0:java (default-cli) @ smart-retail ---
-16:26:10.575 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
-16:26:10.577 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
-16:26:10.577 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - Java version: 23
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
-16:26:10.578 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
-16:26:10.579 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @5d1298fe
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/ms/30q132l114b8y9dq6msryjkr0000gp/T (java.io.tmpdir)
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - Platform: MacOS
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
-16:26:10.580 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-16:26:10.581 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
-16:26:10.581 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
-16:26:10.637 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
-16:26:10.642 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
-16:26:10.646 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-16:26:10.646 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-16:26:10.649 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
-16:26:10.649 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
-16:26:10.652 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
-16:26:10.673 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.level: simple
-16:26:10.673 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.targetRecords: 4
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
-16:26:10.676 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-16:26:10.708 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.channel.DefaultChannelId - -Dio.netty.processId: 16113 (auto-detected)
-16:26:10.709 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
-16:26:10.709 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
-16:26:10.714 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtilInitializations - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
-16:26:10.714 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
-16:26:10.715 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 42:a1:46:ff:fe:4c:83:8c (auto-detected)
-16:26:10.729 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
-16:26:10.729 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
-16:26:10.729 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-4月 15, 2025 4:26:10 下午 com.retail.checkout.CheckoutServer main
+18:26:40.618 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+18:26:40.620 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - Java version: 23
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.storeFence: available
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+18:26:40.621 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+18:26:40.622 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+18:26:40.622 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6290d29
+18:26:40.622 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, {int,long}): unavailable
+18:26:40.622 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+18:26:40.623 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /var/folders/ms/30q132l114b8y9dq6msryjkr0000gp/T (java.io.tmpdir)
+18:26:40.623 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+18:26:40.623 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - Platform: MacOS
+18:26:40.623 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: -1 bytes
+18:26:40.623 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+18:26:40.624 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.CleanerJava9 - java.nio.ByteBuffer.cleaner(): available
+18:26:40.624 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+18:26:40.682 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 16
+18:26:40.685 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.concurrent.GlobalEventExecutor - -Dio.netty.globalEventExecutor.quietPeriodSeconds: 1
+18:26:40.688 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+18:26:40.688 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+18:26:40.694 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+18:26:40.694 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+18:26:40.697 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+18:26:40.720 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.level: simple
+18:26:40.720 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector - -Dio.grpc.netty.shaded.io.netty.leakDetection.targetRecords: 4
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 16
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 16
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 9
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 4194304
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: false
+18:26:40.723 [com.retail.checkout.CheckoutServer.main()] DEBUG io.grpc.netty.shaded.io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+18:26:40.753 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.channel.DefaultChannelId - -Dio.netty.processId: 49245 (auto-detected)
+18:26:40.755 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+18:26:40.755 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+18:26:40.764 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtilInitializations - Loopback interface: lo0 (lo0, 0:0:0:0:0:0:0:1%lo0)
+18:26:40.765 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.util.NetUtil - Failed to get SOMAXCONN from sysctl and file /proc/sys/net/core/somaxconn. Default: 128
+18:26:40.766 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 42:a1:46:ff:fe:4c:83:8c (auto-detected)
+18:26:40.776 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+18:26:40.777 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+18:26:40.777 [grpc-nio-boss-ELG-1-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+4月 16, 2025 6:26:40 下午 com.retail.checkout.CheckoutServer main
 INFO: Checkout gRPC server started on port 50050
-16:26:12.867 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkAccessible: true
-16:26:12.867 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkBounds: true
-16:26:12.867 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector@418c6d0a
-16:26:12.889 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:26:12.890 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
-16:26:12.891 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
-16:26:12.891 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
-16:26:12.891 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
-16:26:12.891 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
-16:26:12.894 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:26:12.898 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:26:12.898 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND SETTINGS: ack=true
-16:26:12.898 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:26:12.898 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND SETTINGS: ack=true
-16:26:12.902 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
-16:26:12.910 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
-16:26:12.910 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND PING: ack=false bytes=1234
-16:26:12.911 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND PING: ack=true bytes=1234
-4月 15, 2025 4:26:12 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+18:26:41.319 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkAccessible: true
+18:26:41.319 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf - -Dio.grpc.netty.shaded.io.netty.buffer.checkBounds: true
+18:26:41.319 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.grpc.netty.shaded.io.netty.util.ResourceLeakDetector@1cc93cb0
+18:26:41.338 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:41.339 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+18:26:41.339 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+18:26:41.339 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.chunkSize: 32
+18:26:41.339 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.blocking: false
+18:26:41.339 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.netty.util.Recycler - -Dio.netty.recycler.batchFastThreadLocalOnly: true
+18:26:41.342 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:41.345 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:41.346 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND SETTINGS: ack=true
+18:26:41.346 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:41.346 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND SETTINGS: ack=true
+18:26:41.350 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:26:41.356 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:26:41.357 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND PING: ack=false bytes=1234
+18:26:41.358 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:26:41 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
 INFO: Received cart item: 123, quantity: 1
-4月 15, 2025 4:26:12 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+4月 16, 2025 6:26:41 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
 INFO: Checkout completed: Processed checkout with total items: 1
-16:26:12.931 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
-16:26:12.933 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
-16:26:12.934 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
-16:26:12.936 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND PING: ack=false bytes=1234
-16:26:12.936 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] OUTBOUND PING: ack=true bytes=1234
-16:26:12.938 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x2c59e651, L:/127.0.0.1:50050 - R:/127.0.0.1:63070] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
-16:42:57.501 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:42:57.503 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:42:57.504 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:42:57.504 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND SETTINGS: ack=true
-16:42:57.504 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:42:57.504 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND SETTINGS: ack=true
-16:42:57.506 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
-16:42:57.507 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
-16:42:57.507 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND PING: ack=false bytes=1234
-16:42:57.508 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND PING: ack=true bytes=1234
-4月 15, 2025 4:42:57 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+18:26:41.370 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+18:26:41.371 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:26:41.371 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:26:41.373 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND PING: ack=false bytes=1234
+18:26:41.373 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] OUTBOUND PING: ack=true bytes=1234
+18:26:41.374 [grpc-nio-worker-ELG-3-1] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe3e1cf68, L:/127.0.0.1:50050 - R:/127.0.0.1:58968] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:26:47.763 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:47.765 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:47.765 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:47.765 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND SETTINGS: ack=true
+18:26:47.765 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:47.766 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND SETTINGS: ack=true
+18:26:47.766 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:26:47.767 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:26:47.767 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND PING: ack=false bytes=1234
+18:26:47.767 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:26:47 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
 INFO: Received cart item: 123, quantity: 1
-16:42:57.511 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
-4月 15, 2025 4:42:57 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+18:26:47.773 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 16, 2025 6:26:47 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
 INFO: Checkout completed: Processed checkout with total items: 1
-16:42:57.511 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
-16:42:57.511 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
-16:42:57.513 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND PING: ack=false bytes=1234
-16:42:57.513 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND PING: ack=true bytes=1234
-16:42:57.513 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
-16:42:57.514 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 - R:/127.0.0.1:65060] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
-16:42:57.520 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x6b3983aa, L:/127.0.0.1:50050 ! R:/127.0.0.1:65060] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
+18:26:47.775 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:26:47.775 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:26:47.776 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND PING: ack=false bytes=1234
+18:26:47.776 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] OUTBOUND PING: ack=true bytes=1234
+18:26:47.777 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfe0feacd, L:/127.0.0.1:50050 - R:/127.0.0.1:59118] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:26:59.619 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:59.620 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:59.620 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:26:59.620 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND SETTINGS: ack=true
+18:26:59.621 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:26:59.621 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND SETTINGS: ack=true
+18:26:59.622 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:26:59.622 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:26:59.622 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND PING: ack=false bytes=1234
+18:26:59.623 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:26:59 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+INFO: Received cart item: 123, quantity: 1
+18:26:59.625 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 16, 2025 6:26:59 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+INFO: Checkout completed: Processed checkout with total items: 1
+18:26:59.625 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:26:59.625 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:26:59.626 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND PING: ack=false bytes=1234
+18:26:59.626 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND PING: ack=true bytes=1234
+18:26:59.626 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:26:59.627 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x412615b6, L:/127.0.0.1:50050 - R:/127.0.0.1:59205] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
+18:26:59.631 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x412615b6, L:/127.0.0.1:50050 ! R:/127.0.0.1:59205] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
 java.io.IOException: Broken pipe
 	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:66)
@@ -152,28 +172,28 @@ java.io.IOException: Broken pipe
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-16:43:17.111 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:43:17.113 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:43:17.113 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:43:17.113 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND SETTINGS: ack=true
-16:43:17.114 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:43:17.114 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND SETTINGS: ack=true
-16:43:17.117 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
-16:43:17.117 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
-16:43:17.117 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND PING: ack=false bytes=1234
-16:43:17.118 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND PING: ack=true bytes=1234
-4月 15, 2025 4:43:17 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+18:44:04.699 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:44:04.700 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:44:04.701 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:44:04.702 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND SETTINGS: ack=true
+18:44:04.702 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:44:04.703 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND SETTINGS: ack=true
+18:44:04.705 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:44:04.707 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:44:04.707 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND PING: ack=false bytes=1234
+18:44:04.707 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:44:04 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
 INFO: Received cart item: 123, quantity: 1
-16:43:17.121 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
-4月 15, 2025 4:43:17 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+18:44:04.709 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 16, 2025 6:44:04 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
 INFO: Checkout completed: Processed checkout with total items: 1
-16:43:17.121 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
-16:43:17.121 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
-16:43:17.123 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND PING: ack=false bytes=1234
-16:43:17.123 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND PING: ack=true bytes=1234
-16:43:17.124 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
-16:43:17.124 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 - R:/127.0.0.1:65126] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
-16:43:17.124 [grpc-nio-worker-ELG-3-3] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x9fa8bae3, L:/127.0.0.1:50050 ! R:/127.0.0.1:65126] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
+18:44:04.710 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:44:04.710 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:44:04.712 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND PING: ack=false bytes=1234
+18:44:04.712 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND PING: ack=true bytes=1234
+18:44:04.712 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:44:04.713 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x394efb96, L:/127.0.0.1:50050 - R:/127.0.0.1:61385] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
+18:44:04.713 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x394efb96, L:/127.0.0.1:50050 ! R:/127.0.0.1:61385] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
 java.io.IOException: Broken pipe
 	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:66)
@@ -208,28 +228,124 @@ java.io.IOException: Broken pipe
 	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
 	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 	at java.base/java.lang.Thread.run(Thread.java:1575)
-16:46:42.271 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:46:42.274 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:46:42.276 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
-16:46:42.276 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND SETTINGS: ack=true
-16:46:42.277 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
-16:46:42.277 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND SETTINGS: ack=true
-16:46:42.278 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
-16:46:42.280 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
-16:46:42.280 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND PING: ack=false bytes=1234
-16:46:42.281 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND PING: ack=true bytes=1234
-4月 15, 2025 4:46:42 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+18:47:38.509 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:47:38.515 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:47:38.516 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:47:38.516 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND SETTINGS: ack=true
+18:47:38.516 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:47:38.517 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND SETTINGS: ack=true
+18:47:38.517 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:47:38.519 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:47:38.519 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND PING: ack=false bytes=1234
+18:47:38.519 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:47:38 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
 INFO: Received cart item: 123, quantity: 1
-16:46:42.284 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
-4月 15, 2025 4:46:42 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+4月 16, 2025 6:47:38 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
 INFO: Checkout completed: Processed checkout with total items: 1
-16:46:42.284 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
-16:46:42.285 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
-16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND PING: ack=false bytes=1234
-16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND PING: ack=true bytes=1234
-16:46:42.286 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
-16:46:42.287 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 - R:/127.0.0.1:49182] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
-16:46:42.287 [grpc-nio-worker-ELG-3-4] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x3944b21e, L:/127.0.0.1:50050 ! R:/127.0.0.1:49182] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
+18:47:38.521 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+18:47:38.521 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:47:38.521 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:47:38.523 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND PING: ack=false bytes=1234
+18:47:38.523 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] OUTBOUND PING: ack=true bytes=1234
+18:47:38.523 [grpc-nio-worker-ELG-3-5] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x76ec5fec, L:/127.0.0.1:50050 - R:/127.0.0.1:61805] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:52:39.451 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:52:39.453 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:52:39.454 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+18:52:39.454 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND SETTINGS: ack=true
+18:52:39.454 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+18:52:39.455 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND SETTINGS: ack=true
+18:52:39.457 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+18:52:39.458 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+18:52:39.458 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND PING: ack=false bytes=1234
+18:52:39.458 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 6:52:39 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+INFO: Received cart item: 123, quantity: 1
+18:52:39.461 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 16, 2025 6:52:39 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+INFO: Checkout completed: Processed checkout with total items: 1
+18:52:39.461 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+18:52:39.462 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+18:52:39.464 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND PING: ack=false bytes=1234
+18:52:39.464 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND PING: ack=true bytes=1234
+18:52:39.465 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+18:52:39.465 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 - R:/127.0.0.1:62531] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
+18:52:39.466 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0x9c17b832, L:/127.0.0.1:50050 ! R:/127.0.0.1:62531] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
+java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:66)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:227)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:158)
+	at java.base/sun.nio.ch.SocketChannelImpl.implWrite(SocketChannelImpl.java:597)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:631)
+	at io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doWrite(NioSocketChannel.java:430)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.flush0(AbstractChannel.java:931)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.flush0(AbstractNioChannel.java:354)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannel$AbstractUnsafe.flush(AbstractChannel.java:895)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.flush(DefaultChannelPipeline.java:1372)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeFlush0(AbstractChannelHandlerContext.java:921)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeFlush(AbstractChannelHandlerContext.java:907)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.flush(AbstractChannelHandlerContext.java:893)
+	at io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler.onError(Http2ConnectionHandler.java:656)
+	at io.grpc.netty.shaded.io.grpc.netty.AbstractNettyHandler.exceptionCaught(AbstractNettyHandler.java:99)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.fireExceptionCaught(AbstractChannelHandlerContext.java:317)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline$HeadContext.exceptionCaught(DefaultChannelPipeline.java:1377)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:346)
+	at io.grpc.netty.shaded.io.netty.channel.AbstractChannelHandlerContext.invokeExceptionCaught(AbstractChannelHandlerContext.java:325)
+	at io.grpc.netty.shaded.io.netty.channel.DefaultChannelPipeline.fireExceptionCaught(DefaultChannelPipeline.java:907)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.handleReadException(AbstractNioByteChannel.java:125)
+	at io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:177)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+20:36:54.080 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+20:36:54.087 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+20:36:54.090 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+20:36:54.090 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND SETTINGS: ack=true
+20:36:54.090 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+20:36:54.091 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND SETTINGS: ack=true
+20:36:54.094 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+20:36:54.099 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+20:36:54.099 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND PING: ack=false bytes=1234
+20:36:54.100 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 8:36:54 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+INFO: Received cart item: 123, quantity: 1
+20:36:54.112 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+4月 16, 2025 8:36:54 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+INFO: Checkout completed: Processed checkout with total items: 1
+20:36:54.112 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+20:36:54.113 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+20:36:54.116 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND PING: ack=false bytes=1234
+20:36:54.116 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] OUTBOUND PING: ack=true bytes=1234
+20:36:54.116 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0x0d192c17, L:/127.0.0.1:50050 - R:/127.0.0.1:56151] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+20:38:23.696 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND SETTINGS: ack=false settings={MAX_CONCURRENT_STREAMS=2147483647, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+20:38:23.699 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+20:38:23.699 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND SETTINGS: ack=false settings={ENABLE_PUSH=0, MAX_CONCURRENT_STREAMS=0, INITIAL_WINDOW_SIZE=1048576, MAX_HEADER_LIST_SIZE=8192}
+20:38:23.699 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND SETTINGS: ack=true
+20:38:23.700 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND WINDOW_UPDATE: streamId=0 windowSizeIncrement=983041
+20:38:23.700 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND SETTINGS: ack=true
+20:38:23.704 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND HEADERS: streamId=3 headers=GrpcHttp2RequestHeaders[:path: /retail.CheckoutService/Checkout, :authority: localhost:50050, :method: POST, :scheme: http, te: trailers, content-type: application/grpc, user-agent: grpc-java-netty/1.61.0, grpc-accept-encoding: gzip] streamDependency=0 weight=16 exclusive=false padding=0 endStream=false
+20:38:23.706 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND DATA: streamId=3 padding=0 endStream=true length=12 bytes=00000000070a033132331001
+20:38:23.706 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND PING: ack=false bytes=1234
+20:38:23.706 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND PING: ack=true bytes=1234
+4月 16, 2025 8:38:23 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onNext
+INFO: Received cart item: 123, quantity: 1
+4月 16, 2025 8:38:23 下午 com.retail.checkout.CheckoutServer$CheckoutServiceImpl$1 onCompleted
+INFO: Checkout completed: Processed checkout with total items: 1
+20:38:23.711 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[:status: 200, content-type: application/grpc, grpc-encoding: identity, grpc-accept-encoding: gzip] padding=0 endStream=false
+20:38:23.711 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND DATA: streamId=3 padding=0 endStream=false length=47 bytes=000000002a0801122650726f63657373656420636865636b6f7574207769746820746f74616c206974656d733a2031
+20:38:23.712 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND HEADERS: streamId=3 headers=GrpcHttp2OutboundHeaders[grpc-status: 0] padding=0 endStream=true
+20:38:23.714 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND PING: ack=false bytes=1234
+20:38:23.715 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND PING: ack=true bytes=1234
+20:38:23.715 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+20:38:23.717 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 - R:/127.0.0.1:56253] OUTBOUND GO_AWAY: lastStreamId=2147483647 errorCode=2 length=16 bytes=436f6e6e656374696f6e207265736574
+20:38:23.719 [grpc-nio-worker-ELG-3-8] DEBUG io.grpc.netty.shaded.io.netty.handler.codec.http2.Http2ConnectionHandler - [id: 0xfdcb6b5d, L:/127.0.0.1:50050 ! R:/127.0.0.1:56253] Sending GOAWAY failed: lastStreamId '2147483647', errorCode '2', debugData 'Connection reset'. Forcing shutdown of the connection.
 java.io.IOException: Broken pipe
 	at java.base/sun.nio.ch.SocketDispatcher.writev0(Native Method)
 	at java.base/sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:66)

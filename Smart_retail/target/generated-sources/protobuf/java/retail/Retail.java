@@ -1390,6 +1390,12 @@ public final class Retail {
      * @return The price.
      */
     double getPrice();
+
+    /**
+     * <code>int32 quantity = 4;</code>
+     * @return The quantity.
+     */
+    int getQuantity();
   }
   /**
    * Protobuf type {@code retail.Product}
@@ -1517,6 +1523,17 @@ public final class Retail {
       return price_;
     }
 
+    public static final int QUANTITY_FIELD_NUMBER = 4;
+    private int quantity_ = 0;
+    /**
+     * <code>int32 quantity = 4;</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public int getQuantity() {
+      return quantity_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1540,6 +1557,9 @@ public final class Retail {
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         output.writeDouble(3, price_);
       }
+      if (quantity_ != 0) {
+        output.writeInt32(4, quantity_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -1558,6 +1578,10 @@ public final class Retail {
       if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeDoubleSize(3, price_);
+      }
+      if (quantity_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, quantity_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -1581,6 +1605,8 @@ public final class Retail {
       if (java.lang.Double.doubleToLongBits(getPrice())
           != java.lang.Double.doubleToLongBits(
               other.getPrice())) return false;
+      if (getQuantity()
+          != other.getQuantity()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -1599,6 +1625,8 @@ public final class Retail {
       hash = (37 * hash) + PRICE_FIELD_NUMBER;
       hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
           java.lang.Double.doubleToLongBits(getPrice()));
+      hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+      hash = (53 * hash) + getQuantity();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -1733,6 +1761,7 @@ public final class Retail {
         productId_ = "";
         name_ = "";
         price_ = 0D;
+        quantity_ = 0;
         return this;
       }
 
@@ -1774,6 +1803,9 @@ public final class Retail {
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.price_ = price_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.quantity_ = quantity_;
         }
       }
 
@@ -1834,6 +1866,9 @@ public final class Retail {
         if (other.getPrice() != 0D) {
           setPrice(other.getPrice());
         }
+        if (other.getQuantity() != 0) {
+          setQuantity(other.getQuantity());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -1875,6 +1910,11 @@ public final class Retail {
                 bitField0_ |= 0x00000004;
                 break;
               } // case 25
+              case 32: {
+                quantity_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -2064,6 +2104,38 @@ public final class Retail {
       public Builder clearPrice() {
         bitField0_ = (bitField0_ & ~0x00000004);
         price_ = 0D;
+        onChanged();
+        return this;
+      }
+
+      private int quantity_ ;
+      /**
+       * <code>int32 quantity = 4;</code>
+       * @return The quantity.
+       */
+      @java.lang.Override
+      public int getQuantity() {
+        return quantity_;
+      }
+      /**
+       * <code>int32 quantity = 4;</code>
+       * @param value The quantity to set.
+       * @return This builder for chaining.
+       */
+      public Builder setQuantity(int value) {
+
+        quantity_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 quantity = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearQuantity() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        quantity_ = 0;
         onChanged();
         return this;
       }
@@ -5789,25 +5861,26 @@ public final class Retail {
       "\n\014retail.proto\022\006retail\032\033google/protobuf/" +
       "empty.proto\"0\n\013ProductList\022!\n\010products\030\001" +
       " \003(\0132\017.retail.Product\"(\n\025RecommendationR" +
-      "equest\022\017\n\007user_id\030\001 \001(\t\":\n\007Product\022\022\n\npr" +
+      "equest\022\017\n\007user_id\030\001 \001(\t\"L\n\007Product\022\022\n\npr" +
       "oduct_id\030\001 \001(\t\022\014\n\004name\030\002 \001(\t\022\r\n\005price\030\003 " +
-      "\001(\001\"0\n\010CartItem\022\022\n\nproduct_id\030\001 \001(\t\022\020\n\010q" +
-      "uantity\030\002 \001(\005\"4\n\020CheckoutResponse\022\017\n\007suc" +
-      "cess\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"\"\n\014StockRequ" +
-      "est\022\022\n\nproduct_id\030\001 \001(\t\"!\n\rStockResponse" +
-      "\022\020\n\010quantity\030\001 \001(\005\"1\n\013StockUpdate\022\022\n\npro" +
-      "duct_id\030\001 \001(\t\022\016\n\006change\030\002 \001(\005\"7\n\nStockAl" +
-      "ert\022\022\n\nproduct_id\030\001 \001(\t\022\025\n\ralert_message" +
-      "\030\002 \001(\t2_\n\025RecommendationService\022F\n\022GetRe" +
-      "commendations\022\035.retail.RecommendationReq" +
-      "uest\032\017.retail.Product0\0012K\n\017CheckoutServi" +
-      "ce\0228\n\010Checkout\022\020.retail.CartItem\032\030.retai" +
-      "l.CheckoutResponse(\0012\305\001\n\020InventoryServic" +
-      "e\0227\n\010GetStock\022\024.retail.StockRequest\032\025.re" +
-      "tail.StockResponse\022;\n\014MonitorStock\022\023.ret" +
-      "ail.StockUpdate\032\022.retail.StockAlert(\0010\001\022" +
-      ";\n\014GetInventory\022\026.google.protobuf.Empty\032" +
-      "\023.retail.ProductListb\006proto3"
+      "\001(\001\022\020\n\010quantity\030\004 \001(\005\"0\n\010CartItem\022\022\n\npro" +
+      "duct_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"4\n\020Check" +
+      "outResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030" +
+      "\002 \001(\t\"\"\n\014StockRequest\022\022\n\nproduct_id\030\001 \001(" +
+      "\t\"!\n\rStockResponse\022\020\n\010quantity\030\001 \001(\005\"1\n\013" +
+      "StockUpdate\022\022\n\nproduct_id\030\001 \001(\t\022\016\n\006chang" +
+      "e\030\002 \001(\005\"7\n\nStockAlert\022\022\n\nproduct_id\030\001 \001(" +
+      "\t\022\025\n\ralert_message\030\002 \001(\t2_\n\025Recommendati" +
+      "onService\022F\n\022GetRecommendations\022\035.retail" +
+      ".RecommendationRequest\032\017.retail.Product0" +
+      "\0012K\n\017CheckoutService\0228\n\010Checkout\022\020.retai" +
+      "l.CartItem\032\030.retail.CheckoutResponse(\0012\305" +
+      "\001\n\020InventoryService\0227\n\010GetStock\022\024.retail" +
+      ".StockRequest\032\025.retail.StockResponse\022;\n\014" +
+      "MonitorStock\022\023.retail.StockUpdate\032\022.reta" +
+      "il.StockAlert(\0010\001\022;\n\014GetInventory\022\026.goog" +
+      "le.protobuf.Empty\032\023.retail.ProductListb\006" +
+      "proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -5831,7 +5904,7 @@ public final class Retail {
     internal_static_retail_Product_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_Product_descriptor,
-        new java.lang.String[] { "ProductId", "Name", "Price", });
+        new java.lang.String[] { "ProductId", "Name", "Price", "Quantity", });
     internal_static_retail_CartItem_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_retail_CartItem_fieldAccessorTable = new

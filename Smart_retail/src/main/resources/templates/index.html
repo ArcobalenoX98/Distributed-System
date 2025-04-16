@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html smlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>Samrt Retail</title>
     </head>
@@ -14,8 +14,8 @@
                 <label for="productId">Select Product:</label>
                 <select name="productId" id="productId" required>
                   <option value="">-- Please select --</option>
-                  <th:block th:each="p : ${inventoryList}">
-                    <option th:value="${p.productId}" th:text="${p.name} + ' - $' + ${p.price}"></option>
+                  <th:block th:each="product : ${inventory}">
+                    <option th:value="${product.productId}" th:text="${product.name + ' - $' + product.price}"></option>
                   </th:block>
                 </select>
             </div>
