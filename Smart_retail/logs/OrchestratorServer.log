@@ -713,3 +713,5 @@ Recommended Products:
 20:38:23.717 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe6f4d4d7, L:/127.0.0.1:50053 - R:/127.0.0.1:56250] INBOUND PING: ack=false bytes=1234
 20:38:23.717 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe6f4d4d7, L:/127.0.0.1:50053 - R:/127.0.0.1:56250] OUTBOUND PING: ack=true bytes=1234
 20:38:23.718 [grpc-nio-worker-ELG-3-2] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyServerHandler - [id: 0xe6f4d4d7, L:/127.0.0.1:50053 - R:/127.0.0.1:56250] INBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+21:06:59.020 [grpc-nio-worker-ELG-3-7] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler - [id: 0xf961e43a, L:/127.0.0.1:56150 - R:localhost/127.0.0.1:50051] OUTBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=
+21:08:28.655 [grpc-nio-worker-ELG-3-6] DEBUG io.grpc.netty.shaded.io.grpc.netty.NettyClientHandler - [id: 0x2da0703c, L:/127.0.0.1:56252 - R:localhost/127.0.0.1:50051] OUTBOUND GO_AWAY: lastStreamId=0 errorCode=0 length=0 bytes=

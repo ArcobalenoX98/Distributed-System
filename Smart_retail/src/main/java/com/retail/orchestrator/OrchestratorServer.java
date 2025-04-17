@@ -41,7 +41,7 @@ public class OrchestratorServer {
             ManagedChannel inventoryChannel = ManagedChannelBuilder.forAddress("localhost", 50052).usePlaintext().build();
             InventoryServiceGrpc.InventoryServiceBlockingStub inventoryStub = InventoryServiceGrpc.newBlockingStub(inventoryChannel);
             StockResponse inventoryResponse = inventoryStub.getStock(
-                    StockRequest.newBuilder().setProductId("123").build()
+                    StockRequest.newBuilder().setProductId(request.getProductId()).build()
             );
             inventoryChannel.shutdown();
 
