@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:text="${title}">Smart Retail Result</title>
+</head>
+<body>
+    <h1>Order Result</h1>
+    <p th:text="'Order Success: ' + ${result}"></p>
+    <p th:text="'Message: ' + ${message}"></p>
+    <a href="/">Back</a>
+
+    Recommendation area
+    <h2>Recommended Products</h2>
+    <ul>
+        <li th:each="product : ${recommendations}">
+            <span th:text="${product.name}"></span> - 
+            <span th:text="${product.price}"></span> Euro
+        </li>
+    </ul>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Result</title>
+    <!-- 添加 Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="mb-4">Order Result</h1>
+
+        <div class="alert" th:classappend="${result} ? 'alert-success' : 'alert-danger'">
+            <strong th:text="${result} ? 'Order Placed Successfully!' : 'Order Failed!'"></strong><br>
+            <!--<span th:text="${message}"></span>-->
+            <p><strong>Inventory Available:</strong> <span th:text="${inventoryQuantity}"></span></p>
+        </div>
+
+        <div th:if="${recommendations}">
+            <h3 class="mt-4">Recommended Products</h3>
+            <ul class="list-group">
+                <li class="list-group-item" th:each="product : ${recommendations}" th:text="${product.name}"></li>
+            </ul>
+        </div>
+
+        <a href="/" class="btn btn-primary mt-4">Back to Home</a>
+    </div>
+</body>
+</html>

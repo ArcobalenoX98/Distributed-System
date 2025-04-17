@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Samrt Retail</title>
+    </head>
+    <body>
+        <h1>Welcome to Smart Retail System</h1>
+        <p>This is the web interface for your gRPC-based smart retail platform</p>
+        <form action="/placeOrder" method="post">
+            <label for="userId"> UserID:</label>
+            <input type ="text" id="userId" name="userId" required><br><br>
+
+            <div class="form-group">
+                <label for="productId">Select Product:</label>
+                <select name="productId" id="productId" required>
+                  <option value="">-- Please select --</option>
+                  <th:block th:each="product : ${inventory}">
+                    <option th:value="${product.productId}" th:text="${product.name + ' - $' + product.price}"></option>
+                  </th:block>
+                </select>
+            </div>
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required><br><br>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </body>
+</html>
