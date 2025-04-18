@@ -34,13 +34,13 @@ public final class OrchestratorProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022orchestrator.proto\022\006retail\"1\n\014OrderReq" +
-      "uest\022\017\n\007user_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"" +
-      "1\n\rOrderResponse\022\017\n\007success\030\001 \001(\010\022\017\n\007mes" +
-      "sage\030\002 \001(\t2R\n\023OrchestratorService\022;\n\014Pro" +
-      "cessOrder\022\024.retail.OrderRequest\032\025.retail" +
-      ".OrderResponseB\035\n\006retailB\021OrchestratorPr" +
-      "otoP\001b\006proto3"
+      "\n\022orchestrator.proto\022\006retail\"E\n\014OrderReq" +
+      "uest\022\017\n\007user_id\030\001 \001(\t\022\022\n\nproduct_id\030\002 \001(" +
+      "\t\022\020\n\010quantity\030\003 \001(\005\"1\n\rOrderResponse\022\017\n\007" +
+      "success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t2R\n\023Orches" +
+      "tratorService\022;\n\014ProcessOrder\022\024.retail.O" +
+      "rderRequest\032\025.retail.OrderResponseB\035\n\006re" +
+      "tailB\021OrchestratorProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -51,7 +51,7 @@ public final class OrchestratorProto {
     internal_static_retail_OrderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_retail_OrderRequest_descriptor,
-        new java.lang.String[] { "UserId", "Quantity", });
+        new java.lang.String[] { "UserId", "ProductId", "Quantity", });
     internal_static_retail_OrderResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_retail_OrderResponse_fieldAccessorTable = new
